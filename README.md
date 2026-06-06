@@ -20,7 +20,7 @@
 3. [JavaScript DOM](#javascript-dom)
 4. [JavaScript Iterations](#javascript-iterations)
 5. [JavaScript Projects](#javascript-projects)
-6. [React JS](#react-js)
+6. [React Native](#react-native)
 
 ---
 
@@ -61,8 +61,8 @@
 
 ---
 
-## React JS
+## React Native
 
 <img src="https://unpkg.com/lucide-static/icons/sparkles.svg" width="18" alt="Sparkles icon" /> **Coming soon**
 
-The React JS section will be added here next, with components, props, state, hooks, and beginner-friendly project practice.
+The React Native section will be added here next, with components, props, state, hooks, and beginner-friendly project practice.
