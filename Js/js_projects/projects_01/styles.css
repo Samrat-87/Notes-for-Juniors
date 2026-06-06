@@ -1,0 +1,136 @@
+/* 1. Global Reset & Typography */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    /* Default background, this will change via JS later */
+    background-color: #f4f4f4; 
+    color: #333;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    transition: background-color 0.5s ease; /* Smooth color transition */
+}
+
+/* 2. Navigation Bar Styling */
+nav {
+    background-color: #333;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: flex-end; /* Pushes links to the right */
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 500;
+    font-size: 1.1rem;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #555;
+}
+
+/* Style for the active link */
+nav a[aria-current="page"] {
+    background-color: #007bff;
+    color: white;
+}
+
+/* 3. Main Content Styling */
+h1 {
+    margin-top: 50px;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #222;
+}
+
+/* 4. Color Buttons Container */
+.canvas {
+    /* Optional wrapper if you were to group buttons, 
+       but currently they are direct children of body in your HTML.
+       We will style the buttons directly below. */
+}
+
+/* 5. The Button Styling (The Spans) */
+.button {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; /* Makes them circles */
+    margin: 15px;
+    cursor: pointer;
+    border: 3px solid #ddd;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease, border-color 0.3s ease;
+}
+
+.button:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+    border-color: #333;
+}
+
+/* Specific Colors matching IDs */
+#grey {
+    background-color: #808080;
+}
+
+#blue {
+    background-color: #2196f3;
+}
+
+#white {
+    background-color: #ffffff;
+}
+
+#yellow {
+    background-color: #ffeb3b;
+}
+
+/* 6. Subheading Styling */
+h2 {
+    margin-top: 40px;
+    font-weight: 400;
+    color: #555;
+    padding: 0 20px;
+}
+
+h2 span {
+    display: block; /* Puts the span text on a new line */
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #777;
+}
+
+/* 7. Responsive Design (Mobile) */
+@media (max-width: 600px) {
+    nav {
+        justify-content: center; /* Center nav links on mobile */
+    }
+
+    h1 {
+        font-size: 2rem;
+        margin-top: 30px;
+    }
+
+    .button {
+        width: 70px; /* Smaller buttons on mobile */
+        height: 70px;
+        margin: 10px;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+}

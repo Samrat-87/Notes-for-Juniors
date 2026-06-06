@@ -1,0 +1,124 @@
+/* 1. Import a cool Digital Font */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;500&display=swap');
+
+/* 2. Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* Animated Gradient Background */
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite; /* Smooth moving background */
+    
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+/* Background Animation Keyframes */
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* 3. Navigation Bar (Floating Glass) */
+nav {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px); /* The "Frosted Glass" effect */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 30px;
+    transition: background 0.3s;
+}
+
+nav a:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+nav a[aria-current="page"] {
+    background: white;
+    color: #e73c7e; /* Matches the background theme */
+    font-weight: bold;
+}
+
+/* 4. Main Heading */
+h1 {
+    text-align: center;
+    margin-top: 40px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* 5. Center Container (The Glass Card) */
+.center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    /* Card Styling */
+    margin: 50px auto;
+    padding: 50px 80px;
+    background: rgba(255, 255, 255, 0.15); /* Semi-transparent white */
+    backdrop-filter: blur(20px);           /* Strong blur behind the card */
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Thin bright border */
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); /* Deep shadow for depth */
+}
+
+/* 6. The Label (#banner) */
+#banner span {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: rgba(255, 255, 255, 0.8);
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* 7. The Clock Numbers (#Clock) */
+#Clock {
+    font-family: 'Orbitron', sans-serif; /* The Sci-Fi Font */
+    font-size: 5rem;
+    font-weight: 700;
+    color: white;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.6); /* Glowing text */
+    min-width: 350px;
+    text-align: center;
+}
+
+/* 8. Mobile Responsiveness */
+@media (max-width: 600px) {
+    .center {
+        width: 90%;
+        padding: 40px 20px;
+    }
+
+    #Clock {
+        font-size: 2.8rem; /* Smaller font for mobile */
+        min-width: unset;
+    }
+    
+    nav {
+        justify-content: center;
+    }
+}
